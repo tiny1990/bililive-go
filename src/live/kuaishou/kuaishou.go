@@ -91,7 +91,7 @@ func (l *Live) GetStreamUrls() (us []*url.URL, err error) {
 	var urls []string
 
 	addr := ""
-	addr = "liveroom.liveStream.playUrls.0.adaptationSet.representation.0.url"
+	addr = "liveroom.liveStream.playUrls.0.adaptationSet.representation.3.url"
 
 	// 由于更高清晰度需要cookie，暂时无法传，先注释
 	//maxQuality := len(data.Get("liveroom.liveStream.playUrls.0.adaptationSet.representation").Array()) - 1
