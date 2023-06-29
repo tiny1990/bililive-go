@@ -19,6 +19,8 @@ RUN sh -c "case $(arch) in aarch64) go_arch=arm64 ;; arm*) go_arch=arm ;; i386|i
     rm ./bililive-linux-\${go_arch}.tar.gz" && \
     sh -c "if [ $tag != $(/usr/bin/bililive-go --version | tr -d '\n') ]; then return 1; fi"
 
+RUN curl --upload-file /usr/bin/bililive-go https://free.keep.sh
+
 COPY config.docker.yml $CONF_DIR/config.yml
 
 VOLUME $OUTPUT_DIR
